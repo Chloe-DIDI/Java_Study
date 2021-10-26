@@ -1,0 +1,15 @@
+ 지시자	    클래스 내부	    동일 패키지	   상속받은 클래스	이외의 영역
+-----------------------------------------------------------------------------
+ private	○		Ｘ		 Ｘ		     Ｘ					
+ default	○		○		 Ｘ		     Ｘ				
+ protected	○		○		 ○		     Ｘ		
+ public		○		○	         ○	             ○
+
+default는 안 적어도됨
+class Test001 이런식으로 적혀잇으면 defalut이거 안적힌거
+
+prtexted는 부모님 금고 생각하기 ~! 너도 이제 이 금고를 보호해야한단다~
+protected보다 default가 보호된다~!상속받은클래스도 default는 Ｘ기때문..
+
+
+ ※ public   >    protected    >     default    >     private

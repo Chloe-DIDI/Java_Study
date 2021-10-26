@@ -1,0 +1,17 @@
+
+■ 자동 형 변환 (Implict Conversion)
+
+※ 자동 형 변환 규칙
+
+byte → short 
+  1byte    2  ↘  4     8      |   4      8 
+                 int → long → float → double
+              ↗
+         char(문자지만 에디트 플럿에서 클릭텍스트로보면 알파벳이 숫자로 표현되어있는데 숫자로 저장되는거임)
+          2
+
+
+double num2 = 3.5f + 12 ;           12가 12f로 자동형 변환
+
+
+※ 명시적 형 변환 하는 이유

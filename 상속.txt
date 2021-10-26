@@ -1,0 +1,66 @@
+interface 인터페이스
+{
+     메소드1();
+     메소드2();
+     메소드3();
+}
+
+abstract class 클래스1 implements 인터페이스
+{
+     @Override
+     메소드1()
+     {
+         .... 정의 끝~!!!;
+     }
+}
+
+abstract class 클래스2 extends 클래스1
+{
+     메소드4()
+     {
+     }
+}
+
+abstract class 클래스3 extends 클래스1
+{
+     @Override
+     메소드2()
+     {
+     }
+}
+
+abstract class 클래스4 extends 클래스1
+{
+     메소드5()
+     {
+     }
+}
+
+abstract class 클래스5 extends 클래스1
+{
+     @Override
+     메소드5()
+     {
+     }
+}
+
+class 클래스6 extends 클래스1
+{
+     @Override
+     메소드3()
+     {
+     }
+ 
+     메소드6()
+     {
+     }
+
+}
+
+
+
+
+
+
+
+
