@@ -1,38 +1,38 @@
 
 /*
-¡Û java.util.Random Å¬·¡½º´Â
+â—‹ java.util.Random í´ëž˜ìŠ¤ëŠ”
 
-   ¿©·¯ ÇüÅÂÀÇ ³­¼ö¸¦ ¹ß»ý½ÃÄÑ Á¦°øÇÏ´Â Å¬·¡½ºÀÌ´Ù.
-   Math Å¬·¡½ºÀÇ Á¤Àû ¸Þ¼ÒµåÀÎ random() ¸Þ¼Òµåµµ 
-   ³­¼ö¸¦ ¹ß»ý½ÃÄÑ Á¦°øÇÏ´Â ¸Þ¼ÒµåÀÌÁö¸¸
-   0.0 ~ 1.0 »çÀÌÀÇ ½Ç¼ö ÇüÅÂ¸¸ ¹ß»ýÇÏ°Ô µÇ¹Ç·Î
-   ÇÊ¿äÇÑ ¿©·¯ ÇüÅÂÀÇ ³­¼ö¸¦ ¸¸µé¾î³»±â À§ÇØ¼­´Â 
-   Ãß°¡ÀûÀÎ ¿¬»êµéÀ» ¼öÇàÇØ¾ß ÇÑ´Ù.
-   ±×·¡¼­ ÀÚ¹Ù´Â ¿©·¯ ÇüÅÂÀÇ ³­¼ö¸¦ ¹ß»ý½ÃÄÑÁÖ´Â 
-   Àü¿ë Å¬·¡½ºÀÎ Random Å¬·¡½º¸¦ º°µµ·Î Á¦°øÇÏ°í ÀÖ´Ù.
+   ì—¬ëŸ¬ í˜•íƒœì˜ ë‚œìˆ˜ë¥¼ ë°œìƒì‹œì¼œ ì œê³µí•˜ëŠ” í´ëž˜ìŠ¤ì´ë‹¤.
+   Math í´ëž˜ìŠ¤ì˜ ì •ì  ë©”ì†Œë“œì¸ random() ë©”ì†Œë“œë„ 
+   ë‚œìˆ˜ë¥¼ ë°œìƒì‹œì¼œ ì œê³µí•˜ëŠ” ë©”ì†Œë“œì´ì§€ë§Œ
+   0.0 ~ 1.0 ì‚¬ì´ì˜ ì‹¤ìˆ˜ í˜•íƒœë§Œ ë°œìƒí•˜ê²Œ ë˜ë¯€ë¡œ
+   í•„ìš”í•œ ì—¬ëŸ¬ í˜•íƒœì˜ ë‚œìˆ˜ë¥¼ ë§Œë“¤ì–´ë‚´ê¸° ìœ„í•´ì„œëŠ” 
+   ì¶”ê°€ì ì¸ ì—°ì‚°ë“¤ì„ ìˆ˜í–‰í•´ì•¼ í•œë‹¤.
+   ê·¸ëž˜ì„œ ìžë°”ëŠ” ì—¬ëŸ¬ í˜•íƒœì˜ ë‚œìˆ˜ë¥¼ ë°œìƒì‹œì¼œì£¼ëŠ” 
+   ì „ìš© í´ëž˜ìŠ¤ì¸ Random í´ëž˜ìŠ¤ë¥¼ ë³„ë„ë¡œ ì œê³µí•˜ê³  ìžˆë‹¤.
 */
 
 
-// ·Î¶Ç ¹øÈ£ »ý¼º±â (³­¼ö ¹ß»ý ÇÁ·Î±×·¥)
+// ë¡œë˜ ë²ˆí˜¸ ìƒì„±ê¸° (ë‚œìˆ˜ ë°œìƒ í”„ë¡œê·¸ëž¨)
 
-// ÇÁ·Î±×·¥ÀÌ ½ÇÇàµÇ¸é ±âº»ÀûÀ¸·Î ·Î¶Ç¸¦ 
-// 5°ÔÀÓ ¼öÇàÇÏ´Â ÇÁ·Î±×·¥ ±¸Çö
-// (ÀÛÀº ¹øÈ£ºÎÅÍ Å« ¼ø¼­·Î Á¤·Ä)
+// í”„ë¡œê·¸ëž¨ì´ ì‹¤í–‰ë˜ë©´ ê¸°ë³¸ì ìœ¼ë¡œ ë¡œë˜ë¥¼ 
+// 5ê²Œìž„ ìˆ˜í–‰í•˜ëŠ” í”„ë¡œê·¸ëž¨ êµ¬í˜„
+// (ìž‘ì€ ë²ˆí˜¸ë¶€í„° í° ìˆœì„œë¡œ ì •ë ¬)
 
-// ½ÇÇà ¿¹)
+// ì‹¤í–‰ ì˜ˆ)
 // 2  4  6 23 41 42
 //16 18 22 30 36 43
 // 6 19 21 22 25 35
 // 4 14 18 23 27 40
 // 8 20 27 33 41 42
-// °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£¼¼¿ä...
+// ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”...
 
 import java.util.Random;
 import java.util.Arrays;
 
 class Lotto
-{
-	// ¹è¿­ º¯¼ö ¼±¾ð ¹× ¸Þ¸ð¸® ÇÒ´ç ¡æ ·Î¶Ç ¹øÈ£¸¦ ´ã¾ÆµÑ ¹è¿­¹æ 6Ä­
+{ 
+	// ë°°ì—´ ë³€ìˆ˜ ì„ ì–¸ ë° ë©”ëª¨ë¦¬ í• ë‹¹ â†’ ë¡œë˜ ë²ˆí˜¸ë¥¼ ë‹´ì•„ë‘˜ ë°°ì—´ë°© 6ì¹¸
 	private int[] num = new int[6];
 
 	//getter
@@ -41,7 +41,7 @@ class Lotto
 		return num;
 	}
 
-	// 6°³ÀÇ ³­¼ö¸¦ ¹ß»ý½ÃÅ°´Â ¸Þ¼Òµå Á¤ÀÇ
+	// 6ê°œì˜ ë‚œìˆ˜ë¥¼ ë°œìƒì‹œí‚¤ëŠ” ë©”ì†Œë“œ ì •ì˜
 	public void start()
 	{
 		Random rd = new Random();
@@ -50,30 +50,30 @@ class Lotto
 		int cnt = 0;
 
 		//check~!!!
-		jump:		// ºó¹øÇÑ »ç¿ëÀÌ ¹Ù¶÷Á÷ÇÏÁö ¸øÇÏ´Ù
+		jump:		// ë¹ˆë²ˆí•œ ì‚¬ìš©ì´ ë°”ëžŒì§í•˜ì§€ ëª»í•˜ë‹¤
 
-		while (cnt<6)	// ¿õ ¡æ 0 1 2 3 4 5
+		while (cnt<6)	// ì›… â†’ 0 1 2 3 4 5
 		{
 				//re.nextInt(45);		// 0 ~ 44
 			n = rd.nextInt(45)+1;		// 1 ~ 45
 			// 45 13
 
-			for (int i=0; i<cnt; i++)	// œ¼~ 0 ¡æ ºñ±³¾ÈÇÔ / 1¡æ0 / 2¡æ01/3¡æ012/4¡æ0123/5¡æ01234 
+			for (int i=0; i<cnt; i++)	// Âœ~ 0 â†’ ë¹„êµì•ˆí•¨ / 1â†’0 / 2â†’01/3â†’012/4â†’0123/5â†’01234 
 			{
 				if (num[i]==n)
 				{
-					// ³­¼ö¸¦ ´Ù½Ã ¹ß»ý½ÃÅ³ ¼ö ÀÖµµ·Ï Ã³¸®
+					// ë‚œìˆ˜ë¥¼ ë‹¤ì‹œ ë°œìƒì‹œí‚¬ ìˆ˜ ìžˆë„ë¡ ì²˜ë¦¬
 					continue jump;
 				}
 			}
 			num[cnt++] = n;
 		}
-		// Á¤·Ä ¸Þ¼Òµå È£Ãâ
+		// ì •ë ¬ ë©”ì†Œë“œ í˜¸ì¶œ
 		sorting();
 
 	}// end start()
 
-	//Á¤·Ä ¸Þ¼Òµå Á¤ÀÇ
+	//ì •ë ¬ ë©”ì†Œë“œ ì •ì˜
 	private void sorting()
 	{
 		Arrays.sort(num);	
@@ -86,15 +86,15 @@ public class Test142
 	public static void main(String[] args)
 	{
 
-		//Lotto Å¬·¡½º ±â¹Ý ÀÎ½ºÅÏ½º»ý¼º
+		//Lotto í´ëž˜ìŠ¤ ê¸°ë°˜ ì¸ìŠ¤í„´ìŠ¤ìƒì„±
 		Lotto lotto = new Lotto();
 
-		// ±âº» - 5°ÔÀÓ
+		// ê¸°ë³¸ - 5ê²Œìž„
 		for (int i=1; i<=5; i++)
 		{
 			lotto.start();
 			
-			//°á°ú Ãâ·Â
+			//ê²°ê³¼ ì¶œë ¥
 			for (int n : lotto.getNum())
 			{
 				System.out.printf("%4d", n);
@@ -105,23 +105,23 @@ public class Test142
 	}
 }
 /*
-		// ÀÎ½ºÅÏ½º »ý¼º
+		// ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Random rd = new Random();
 
-		// ÁÖ¿ä º¯¼ö ¼±¾ð
-		int temp[] = new int[6];	// ¼ö¸¦ ´ãÀ» º¯¼ö
+		// ì£¼ìš” ë³€ìˆ˜ ì„ ì–¸
+		int temp[] = new int[6];	// ìˆ˜ë¥¼ ë‹´ì„ ë³€ìˆ˜
 		boolean t = true;
 
-		// ¹è¿­»ý¼º
-		for (int i=0; i<5; i++)	//°³ÇàÀ» À§ÇÑ Æ÷¹®
+		// ë°°ì—´ìƒì„±
+		for (int i=0; i<5; i++)	//ê°œí–‰ì„ ìœ„í•œ í¬ë¬¸
 		{
-			// ³­¼ö ¹ß»ý
-			for (int j=0; j<6; j++)	//¾Õ¿¡¼­ºÎÅÍ ºñ±³
+			// ë‚œìˆ˜ ë°œìƒ
+			for (int j=0; j<6; j++)	//ì•žì—ì„œë¶€í„° ë¹„êµ
 			{
 				//temp[j] = (int)Math.round(Math.random()*45);
 				temp[j] = rd.nextInt(45)+1;
 
-				for (int k=0; k<6; k++)	//µÞ¹øÈ£µé°ú ºñ±³
+				for (int k=0; k<6; k++)	//ë’·ë²ˆí˜¸ë“¤ê³¼ ë¹„êµ
 				{
 					if (j==k)
 						break;
@@ -134,7 +134,7 @@ public class Test142
 				}				
 			}
 			
-			// ¼±ÅÃÁ¤·Ä
+			// ì„ íƒì •ë ¬
 			for (int a=0; a<temp.length-1; a++)
 			{
 				for (int b=a+1; b<temp.length; b++)
@@ -148,7 +148,7 @@ public class Test142
 				}
 			}
 
-			// °á°ú Ãâ·Â
+			// ê²°ê³¼ ì¶œë ¥
 			for (int n : temp)
 				System.out.printf("%3d", n);
 			System.out.println();
@@ -158,7 +158,7 @@ public class Test142
 
 }*/
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
   2 18 21 30 36 39
   1  5  6 11 18 26
